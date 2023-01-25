@@ -11,7 +11,7 @@ RUN rm -rf /opt/tomcat/webapps/manager/META-INF/context.xml
 COPY context2 /opt/tomcat/webapps/manager/META-INF/context.xml
 RUN rm -rf /opt/tomcat/conf/tomcat-users.xml
 COPY users  /opt/tomcat/conf/tomcat-users.xml
-WORKDIR /var/lib/jenkins/workspace/Pipeline/webapp/target
+WORKDIR /var/lib/jenkins/workspace/test1/webapp/target
 COPY *.war /usr/local/tomcat/webapps
 EXPOSE 8080
 CMD ["/opt/tomcat/bin/catalina.sh", "run"]
